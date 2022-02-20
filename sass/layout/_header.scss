@@ -1,0 +1,32 @@
+@use "../abstracts" as *;
+
+.header {
+  position: fixed;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+  > * {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  &__logo {
+    color: #ea1c2c;
+  }
+
+  &__logo,
+  &__link {
+    font-size: 1.5rem;
+  }
+
+  &__link {
+    &:hover {
+      color: #ea1c2c;
+    }
+  }
+
+  &--scrolled {
+    background-color: rgb(222, 192, 222);
+  }
+}

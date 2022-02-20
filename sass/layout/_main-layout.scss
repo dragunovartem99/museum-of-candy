@@ -1,0 +1,30 @@
+@use "../abstracts" as *;
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  @include mq(md) {
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  &__textart > * {
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4rem;
+    color: #fff;
+    display: none;
+    @include mq(md) {
+      display: block;
+    }
+  }
+
+  &__textart span {
+    color: #ea1c2c;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}

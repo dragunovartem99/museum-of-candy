@@ -1,9 +1,23 @@
 @use "../abstracts" as *;
 
 html {
-  font-size: 62.5%;
+  font-size: 50%;
+  @include mq(md) {
+    font-size: 56.25%;
+  }
+
+  @include mq(lg) {
+    font-size: 62.5%;
+  }
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+.heading-secondary {
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: #ea1c2c;
+  font-weight: 100;
 }

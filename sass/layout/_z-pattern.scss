@@ -1,0 +1,43 @@
+@use "../abstracts" as *;
+
+.z-pattern {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  grid-template-areas:
+    "content"
+    "image";
+
+  &:nth-child(odd) {
+    @include mq(md) {
+      grid-template-areas: "image content";
+    }
+  }
+
+  &:nth-child(even) {
+    @include mq(md) {
+      grid-template-areas: "content image";
+    }
+  }
+
+  @include mq(md) {
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  &__content {
+    grid-area: content;
+    text-align: center;
+    padding: 10% 10%;
+  }
+
+  &__img {
+    grid-area: image;
+    width: 100%;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    color: #f498b8;
+    font-weight: 100;
+  }
+}
